@@ -136,7 +136,7 @@ for ($i=0; $i < count($columns); $i++) {
 
 $sql = $sql.' reg_date TIMESTAMP);';
 $file_name = "/surveyform".$lastid.".php";
-$actual_link = dirname("{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}").$file_name;
+$actual_link = dirname("{$_SERVER['REQUEST_URI']}").$file_name;
 //echo "<a href = '$actual_link'>$actual_link</a>";
 $stmt = $mysqli->prepare($sql);
 $stmt->execute();
